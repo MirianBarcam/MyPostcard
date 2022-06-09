@@ -3,36 +3,68 @@ body {
 	font-family: Shadows Into Light;
 }
 
-* {
-	border: 1px dashed red;
-	min-height: 10px;
-}
-
 .postcard {
 	background: white;
 	height: 300px;
 	width: 400px;
 	margin: auto;
+	display: grid;
+	grid-template-rows: 20% 60% 20%;
 }
 
 .postcard-header {
 	display: flex;
+	grid-row: 1;
 }
 
 .postcard-header h1 {
 	width: 90%;
 	margin-top: 0px;
+	padding-left: 10px;
 }
 
 .postcard-header img {
 	height: 50px;
 	width: 50px;
+	padding: 5px 5px 0px 0px;
 }
 
 .postcard-body {
 	display: flex;
+	grid-row: 2;
+	font-size: 15px;
+	text-align: center;
+	vertical-align: middle;
 }
 
 .body-left {
 	padding: 5px;
+}
+
+.body-right input {
+	vertical-align: auto;
+	border: none;
+	border-bottom: 1px solid grey;
+}
+
+.postcard-footer {
+	padding: 10px;
+	text-align: center;
+	grid-row: 3;
+}
+
+.postcard-footer button {
+	color: black;
+	background-color: dimgray;
+	padding: 10px;
+	border: 1px;
+}
+
+.btn-send:hover {
+	background-color: #a7d8fa;
+	color: white;
+}
+
+* {
+	align-items: baseline;
 }
